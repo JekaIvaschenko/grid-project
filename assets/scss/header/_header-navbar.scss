@@ -1,0 +1,123 @@
+.header-navbar {
+    position: relative;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    letter-spacing: 0.1em;
+    justify-items: end;
+
+    &__btn {
+        width: 30px;
+        height: 23px;
+        position: relative;
+        margin: $gap 0;
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        @include md-min{
+          display: none;
+        }
+        @include md{
+          display: block;
+        }
+        
+
+        &-row {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: $color-light;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+              }
+              
+              &:nth-child(2) {
+                top: 9px;
+              }
+              
+              &:nth-child(3) {
+                top: 18;
+                }
+      }
+
+      &--active span:nth-child(1) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+      }
+      
+      &--active span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+      }
+      
+      &--active span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+      }
+  }
+}
+  
+  .header-navbar__list {
+    margin: 0 (-$gap) 0 0;
+    padding: 0;
+    list-style: none;
+
+    @include md-min{
+      display: grid;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    
+    @include md{
+      position: absolute;
+      top: 100%;
+      right: $gap;
+      display: none;
+      text-align: right;
+      background-color: rgba(68, 89, 110, 0.9);
+    }
+    
+
+    &--active {
+        display: block;
+  }
+}
+  
+  
+  .header-navbar__link {
+    display: block;
+    padding: $gap;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    font-size: 1.125rem;
+
+    &:hover,
+    &:focus {
+    color: $color-accent;
+    }
+  }

@@ -1,0 +1,88 @@
+.header-content {
+    position: relative;
+
+    &__container {
+        display: grid;
+        @extend  %container;
+      }
+    
+    &__title {
+        text-align: center;
+
+        @include lg-min { 
+            margin: 0 0 53px;
+        }
+        @include lg-md { 
+            margin: 0 0 43px;
+        }
+        @include md { 
+            margin: 0 0 33px;
+        }
+        
+      }
+
+    &__buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+
+                @include sm {
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                }
+
+                .btn {
+                    @include lg-min{
+                        min-width: 250px;
+                    }
+                    @include lg-md{
+                        min-width: 200px;
+                        height: 50px;
+                        padding-top: 14px;
+                        padding-bottom: 14px;
+                        letter-spacing: 0.1em;
+                        font-size: 1rem;
+                    }
+                    @include md-sm{
+                        min-width: 170px;
+                        height: 40px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        letter-spacing: 0.05em;
+                        font-size: 1rem;
+                    }
+                    @include sm{
+                        min-width: 170px;
+                        height: 40px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        letter-spacing: 0.05em;
+                        font-size: 1rem;
+                    }
+                
+                        &:not(:last-of-type) {
+                            @include sm-min{
+                                margin-right: $gap;
+                            }
+                            
+
+                        }
+                    }
+      }
+  }
+  
+  
+  
+  
+  
+  
