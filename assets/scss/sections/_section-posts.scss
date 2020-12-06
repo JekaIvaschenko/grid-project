@@ -67,8 +67,7 @@
   
 
 .post-item {
-    -webkit-transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
+    
     transition: background-color 0.5s;
     background-color: #f2f2f2;
 
@@ -115,39 +114,33 @@
   }
   
   .post-item__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    
     display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    
+    align-content: center;
+    
+    justify-content: center;
     overflow: hidden;
     background-color: $color-primary;
   }
   
   .post-item__image img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    -o-transition: transform 0.5s;
+    
+    object-fit: cover;
+    
     transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
+    
   }
   
   .post-item:hover .post-item__image img {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+      transform: scale(1.1);
   }
   
   .post-item__caption {
     display: grid;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    
+    align-content: center;
     padding: $gap;
   }
   
@@ -160,11 +153,11 @@
   .post-item__caption h3 {
     text-align: center;
     font-family: "Roboto Slab", serif;
+    font-size: 1.125rem;
   }
   
   .post-item__caption p {
-    -webkit-transition: color 0.5s;
-    -o-transition: color 0.5s;
+   
     transition: color 0.5s;
     text-align: center;
   }
@@ -174,23 +167,14 @@
   }
   
   .posts__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
+   
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+
+    justify-content: center;
     padding-left: $gap;
     padding-right: $gap;
 
-    @include sm-min{
-      display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    }
+    
     .btn-accent{
       @include sm-min{
         min-width: 350px;

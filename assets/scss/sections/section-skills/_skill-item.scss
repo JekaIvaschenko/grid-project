@@ -2,8 +2,7 @@
     position: relative;
     display: grid;
     overflow: hidden;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+    
             align-items: center;
     padding: $gap;
     justify-items: center;
@@ -19,8 +18,7 @@
   }
   
   .skill-item:hover .skill-item__image {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
+   
             transform: scale(1.1);
   }
   
@@ -37,8 +35,7 @@
     @include abs-position;
     background-color: $color-primary;
     z-index: 1;
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
+    
     transition: opacity 0.5s;
   }
   
@@ -48,11 +45,11 @@
     background-position: 50% 50%;
     background-size: cover;
     
-    -webkit-transition: -webkit-transform 0.5s;
+   
     transition: -webkit-transform 0.5s;
-    -o-transition: transform 0.5s;
+    
     transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
+  
   }
   
   .skill-item__title {
@@ -60,9 +57,12 @@
     z-index: 2;
     margin: 0;
     
-    font-size: 1.25rem;
-    letter-spacing: 00.1em;
+    
+    letter-spacing: 0.1em;
 
+    @include md-min {
+      font-size: 1.25rem;
+    }
     @include md {
         font-size: 1.125rem;
     }
@@ -72,17 +72,13 @@
   }
   
   .skill-item__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
+   
     display: flex;
     height: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
+   
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+   
             align-items: center;
-    -webkit-transition: color  0.5s;
-    -o-transition: color  0.5s;
+   
     transition: color  0.5s;
   }

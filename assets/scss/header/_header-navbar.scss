@@ -1,9 +1,8 @@
 .header-navbar {
     position: relative;
     display: grid;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    
+    align-items: center;
     letter-spacing: 0.1em;
     justify-items: end;
 
@@ -12,11 +11,9 @@
         height: 23px;
         position: relative;
         margin: $gap 0;
-        -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
-        -webkit-transition: .5s ease-in-out;
-        -o-transition: .5s ease-in-out;
+        
+        transform: rotate(0deg);
+        
         transition: .5s ease-in-out;
         cursor: pointer;
 
@@ -37,11 +34,9 @@
             border-radius: 3px;
             opacity: 1;
             left: 0;
-            -webkit-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                    transform: rotate(0deg);
-            -webkit-transition: .25s ease-in-out;
-            -o-transition: .25s ease-in-out;
+     
+            transform: rotate(0deg);
+          
             transition: .25s ease-in-out;
 
             &:nth-child(1) {
@@ -53,7 +48,7 @@
               }
               
               &:nth-child(3) {
-                top: 18;
+                top: 18px;
                 }
       }
 
@@ -64,14 +59,12 @@
       }
       
       &--active span:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
+       
                 transform: rotate(45deg);
       }
       
       &--active span:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
+       
                 transform: rotate(-45deg);
       }
   }
@@ -84,11 +77,10 @@
 
     @include md-min{
       display: grid;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
+      
               justify-content: end;
       width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+   
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
     
@@ -111,8 +103,7 @@
   .header-navbar__link {
     display: block;
     padding: $gap;
-    -webkit-transition: color 0.5s;
-    -o-transition: color 0.5s;
+
     transition: color 0.5s;
     font-size: 1.125rem;
 

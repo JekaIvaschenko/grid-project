@@ -11,11 +11,10 @@
   .footer__social {
     position: relative;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
+   
             justify-content: center;
     margin-bottom: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
     &::after {
@@ -31,8 +30,7 @@
     & a {
         display: block;
         padding: 10px;
-        -webkit-transition: color 0.5s;
-        -o-transition: color 0.5s;
+       
         transition: color 0.5s;
 
         &:hover,

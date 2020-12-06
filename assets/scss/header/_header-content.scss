@@ -22,28 +22,25 @@
       }
 
     &__buttons {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        
         display: flex;
-        -ms-flex-wrap: wrap;
+       
             flex-wrap: wrap;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
+       
                 justify-content: center;
 
                 @include sm {
-                    -webkit-box-align: center;
-                    -ms-flex-align: center;
+                   
                         align-items: center;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
+               
                         flex-direction: column;
                 }
 
                 .btn {
                     @include lg-min{
                         min-width: 250px;
+                        font-size: 1.125rem;
+                        letter-spacing: 0.1em;
                     }
                     @include lg-md{
                         min-width: 200px;
@@ -53,6 +50,7 @@
                         letter-spacing: 0.1em;
                         font-size: 1rem;
                     }
+                
                     @include md-sm{
                         min-width: 170px;
                         height: 40px;
