@@ -7,6 +7,10 @@
     padding: $gap;
     justify-items: center;
     min-height: calc(33.33vh - 13.333px);
+
+    @media (max-height: 690px){
+      min-height: calc(230px - #{$gap} * 0.66);
+  }
   }
   
   .skill-item:hover .skill-item__overlay {
@@ -66,9 +70,7 @@
     @include md {
         font-size: 1.125rem;
     }
-    @media (max-height: 690px){
-        min-height: calc(230px - #{$gap} * 0.66);
-    }
+    
   }
   
   .skill-item__link {

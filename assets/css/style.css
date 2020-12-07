@@ -1337,7 +1337,7 @@ input::-webkit-input-placeholder {
 }
 
 @media (max-height: 690px) {
-  .skill-item__title {
+  .skill-item {
     min-height: calc(230px - 20px * 0.66);
   }
 }
