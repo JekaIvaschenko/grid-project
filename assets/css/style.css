@@ -549,6 +549,10 @@ input::-webkit-input-placeholder {
   background-color: #d66926;
 }
 
+input {
+  text-transform: none;
+}
+
 .header {
   position: relative;
   display: grid;
@@ -916,6 +920,7 @@ input::-webkit-input-placeholder {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
+  outline-style: none;
 }
 
 .form .btn-accent {
